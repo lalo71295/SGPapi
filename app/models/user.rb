@@ -38,12 +38,6 @@ end
 
   has_one :employee
 
-<<<<<<< HEAD
-  enum role: [:default, :admin]
-=======
-  enum role: [:default, :super_usuario, :directivo, :pmo, :administrador, :consultor, :auxiliar]
->>>>>>> master
-  after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
       self.role ||= :default
